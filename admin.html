@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imaginary University Admin Page</title>
+    <main>
+        <ul class="navigation">
+            <li>
+                <p>Home</p>
+                <p>Student</p>
+                <p>Staff</p>
+            </li>
+        </ul>
 </head>
 <body>
     <div class="container">
@@ -13,7 +21,43 @@
             <h2>Add, Update and Delete student and staff data</h2>
             <button type="submit" value="Submit" >Manage Students</button>
             <button type="submit" value="Submit" >Manage Staff</button>
- </div>
-    
+
+        <div class="departments">
+            Department Selection
+        </div>
+        <div class="semester">
+            Semester Selection
+         </div>
+        <label for="studId">Student ID:</label>
+        <input type="text" name="studId" id="studId" required>
+
+        <label for="fina">First Name:</label>
+        <input type="text" name="fina" id="fina" required>
+
+        <label for="lana">Last Name:</label>
+        <input type="text" name="lana" id="lana" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob" required>
+
+        <label for="gend">Gender:</label>
+        <input type="radio" name="gend" value="Male">Male
+        <input type="radio" name="gend" value="Female">Female
+        <input type="radio" name="gend" value="Other">Other
+
+         <div class="department">
+             Department Selection
+
+        </div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required>
+
+        <label for="joda">Joining date:</label>
+        <input type="date" name="joda" id="joda" required>
+
+        <button type="submit" value="Submit" >add</button>
+        <button type="submit" value="Submit" >cancel</button>
+
+     </div>
 </body>
 </html>
