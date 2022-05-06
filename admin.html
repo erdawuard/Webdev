@@ -8,11 +8,20 @@
     <link rel="stylesheet" type="text/css" href="admin.css">
 </head>
 <body>
+  <navbar>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Staff</a></li>
+      <li><a href="#">Students</a></li>
+  </ul>
+  </navbar>
     <div class="startpage">
-        <h1>Manage Data</h1>
-        <h2>Add, Update and Delete student and staff data</h2>
+      <div class="masta">
+        <button class="form-submit">Manage Staff</button>
+      </div>
+      <div class="mastu">
         <button class="form-submit">Manage Students</button>
-        <button class="form-submit">Manage Staff</button> 
+      </div>
     </div>
 
     <div class="adstudent">
@@ -29,8 +38,6 @@
           <option value="fachbereich3">Fachbereich 3</option>
           <option value="fachbereich4">Fachbereich 4</option>
         </select>
-        <br><br>
-        <input type="submit" value="Submit">
       </form>
          </div>
 
@@ -44,8 +51,6 @@
               <option value="semester5">Semester 5</option>
               <option value="semester6">Semester 6</option>
             </select>
-            <br><br>
-            <input type="submit" value="Submit">
           </form>
     </div>
 
@@ -68,7 +73,7 @@
         <input type="radio" name="gend" value="Other">Other
     </div>
 
-    <div class="department" required>
+    <div class="department2" required>
             <label for="department2">Department Selection:</label>
             <select name="department2" id="department2">
               <option value="fachbereich1">Fachbereich 1</option>
@@ -76,11 +81,10 @@
               <option value="fachbereich3">Fachbereich 3</option>
               <option value="fachbereich4">Fachbereich 4</option>
             </select>
-            <br><br>
-            <input type="submit" value="Submit">
           </form>
+    </div>
 
-        <div class="startform2">      
+    <div class="startform2">      
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" required>
          
@@ -89,13 +93,9 @@
          
             <button class="form-submit">add</button>
             <button class="form-submit">cancel</button>
-        </div>
     </div>
-    <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Staff</a></li>
-        <li><a href="#">Students</a></li>
-    </ul>
+    
+  
     
      <script src="login.js"></script>
 
