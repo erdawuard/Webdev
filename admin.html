@@ -5,120 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imaginary University Admin Page</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" type="text/css" href="admin.css">
 </head>
 <body>
-    <form name="Manage Data" id="MaDa" action="admin.html" onsubmit="return validateForm()" method="post"> 
+    <div class="startpage">
         <h1>Manage Data</h1>
         <h2>Add, Update and Delete student and staff data</h2>
-        <button type="submit" value="Submit" >Manage Students</button>
-        <button type="submit" value="Submit" >Manage Staff</button> 
-    <div class="container">
-        <div class="adupde">
-            <button type="submit" value="submit"> Add Student</button>
-            <button type="submit" value="submit"> Update Student</button>
-            <button type="submit" value="submit"> Delete Student</button>
-        </div>
-      <div class="select-box">
-            <div class="options-container">
-                <div class="departments">
-                    <h2>Department Selection</h2>
-                 
-                 </div>
-                <div class="options">
-                    <label for="fb1">Fachbereich 1</label>
-                    <input type="radio" class="radio" id="fb1" name="department"
-                </div> 
-                <div class="options">
-                    <label for="fb2">Fachbereich 2</label>
-                    <input type="radio" class="radio" id="fb2" name="department"
-                </div> 
-                <div class="options">
-                    <label for="fb3">Fachbereich 3</label>
-                    <input type="radio" class="radio" id="fb3" name="department"
-                </div> 
-                <div class="options">
-                    <label for="fb4">Fachbereich 4</label>
-                    <input type="radio" class="radio" id="fb4" name="department"
-                </div> 
-             </div>
-         </div>
-         <div class="select-box2">
-            <div class="options-contaier2">
-               <div class="semester">
-                   <h2>Semester Selection</h2> 
-                 </div>
-                <div class="options2">
-                   <label for="se1">1. Semester</label>
-                   <input type="radio" class="radio" id="se1" name="semester"
-               </div> 
-               <div class="options2">
-                   <label for="se2">2. Semester</label>
-                   <input type="radio" class="radio" id="se2" name="semester"
-               </div> 
-               <div class="options2">
-                   <label for="se3">3. Semester</label>
-                   <input type="radio" class="radio" id="se3" name="semester"
-               </div> 
-               <div class="options2">
-                   <label for="se4">4. Semester</label>
-                   <input type="radio" class="radio" id="se4" name="semester"
-               </div> 
-           </div>
-        </div>
-    
-       <label for="studId">Student ID:</label>
-       <input type="text" name="studId" id="studId" required>
-    
-       <label for="fina">First Name:</label>
-       <input type="text" name="fina" id="fina" required>
-    
-       <label for="lana">Last Name:</label>
-       <input type="text" name="lana" id="lana" required>
-    
-       <label for="dob">Date of Birth:</label>
-       <input type="date" name="dob" id="dob" required>
-    
-       <label for="gend">Gender:</label>
-       <input type="radio" name="gend" value="Male">Male
-       <input type="radio" name="gend" value="Female">Female
-       <input type="radio" name="gend" value="Other">Other
-    
-     
-       <div class="select-box3">
-           <div class="options-contaienr3">
-               <div class="department">
-                   <h2>Department Selection</h2>
-       
-               </div>
-               <div class="options3">
-                   <label for="fb1">Fachbereich 1</label>
-                   <input type="radio" class="radio" id="fb1" name="department2"
-               </div> 
-               <div class="options3">
-                   <label for="fb2">Fachbereich 2</label>
-                   <input type="radio" class="radio" id="fb2" name="department2"
-               </div> 
-               <div class="options3">
-                   <label for="fb3">Fachbereich 3</label>
-                   <input type="radio" class="radio" id="fb3" name="department2"
-               </div> 
-               <div class="options3">
-                   <label for="fb4">Fachbereich 4</label>
-                   <input type="radio" class="radio" id="fb4" name="department2"
-               </div> 
-            </div>
-        </div>
-       <label for="email">Email:</label>
-       <input type="text" name="email" id="email" required>
-    
-       <label for="joda">Joining date:</label>
-       <input type="date" name="joda" id="joda" required>
-    
-       <button type="submit" value="Submit" >add</button>
-       <button type="submit" value="Submit" >cancel</button>
-    
+        <button class="form-submit">Manage Students</button>
+        <button class="form-submit">Manage Staff</button> 
     </div>
+
+    <div class="adstudent">
+            <button class="form-submit"> Add Student</button>
+            <button class="form-submit"> Update Student</button>
+            <button class="form-submit"> Delete Student</button>
+    </div>
+
+      <div class="department">
+        <label for="department">Department Selection:</label>
+        <select name="department" id="department">
+          <option value="fachbereich1">Fachbereich 1</option>
+          <option value="fachbereich2">Fachbereich 2</option>
+          <option value="fachbereich3">Fachbereich 3</option>
+          <option value="fachbereich4">Fachbereich 4</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+         </div>
+
+    <div class="semester">
+            <label for="semester">Semester Selection:</label>
+            <select name="semester" id="semester">
+              <option value="semester1">Semester 1</option>
+              <option value="semester2">Semester 2</option>
+              <option value="semester3">Semester 3</option>
+              <option value="semester4">Semester 4</option>
+              <option value="semester5">Semester 5</option>
+              <option value="semester6">Semester 6</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+
+    <div class="startform">
+        <label for="studId">Student ID:</label>
+        <input type="text" name="studId" id="studId" required>
+     
+        <label for="fina">First Name:</label>
+        <input type="text" name="fina" id="fina" required>
+     
+        <label for="lana">Last Name:</label>
+        <input type="text" name="lana" id="lana">
+     
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob">
+     
+        <label for="gend">Gender:</label>
+        <input type="radio" name="gend" value="Male">Male
+        <input type="radio" name="gend" value="Female">Female
+        <input type="radio" name="gend" value="Other">Other
+    </div>
+
+    <div class="department" required>
+            <label for="department2">Department Selection:</label>
+            <select name="department2" id="department2">
+              <option value="fachbereich1">Fachbereich 1</option>
+              <option value="fachbereich2">Fachbereich 2</option>
+              <option value="fachbereich3">Fachbereich 3</option>
+              <option value="fachbereich4">Fachbereich 4</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+          </form>
+
+        <div class="startform2">      
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+         
+            <label for="joda">Joining date:</label>
+            <input type="date" name="joda" id="joda">
+         
+            <button class="form-submit">add</button>
+            <button class="form-submit">cancel</button>
+        </div>
+    </div>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Staff</a></li>
+        <li><a href="#">Students</a></li>
+    </ul>
+    
      <script src="login.js"></script>
+
 </body>
 </html>

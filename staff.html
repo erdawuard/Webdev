@@ -8,17 +8,41 @@
 </head>
 <body>
     <div class="navigation">
-        <h1>Course Overview</h1>
-        <button type="submit" value="Submit" >Mathemathics</button>
-        <button type="submit" value="Submit" >Programming</button>
-        <button type="submit" value="Submit" >Computer Networks</button>
-        <button type="submit" value="Submit" >Operating Systems</button>
-        <button type="submit" value="Submit" >Software Engineering</button>
-        <button type="submit" value="Submit" >Databanks</button>
-        <button type="submit" value="Submit" >Webdevelopment</button>
-        <button type="submit" value="Submit" >Computergraphics</button>
-        <button type="submit" value="Submit" >Distributed Systems</button>
+        <label for="navigation">Course Selection:</label>
+        <select name="navigation" id="navigation">
+          <option value="Mathemathics">Mathemathics</option>
+          <option value="Programming">Programming</option>
+          <option value="Computer Networks">Computer Networks</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Databanks">Databanks</option>
+          <option value="Webdevelopment">Webdevelopment</option>
+          <option value="Computergraphics">Computergraphics</option>
+          <option value="Distributed Systems">Distributed Systems</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
-    
+
+    <div class="students">
+        <label for="students">Students overview:</label>
+        <select name="students" id="students">
+          <option value="1">John Snow</option>
+          <option value="2">Tony Montana</option>
+          <option value="3">Benjamin Bluemchen</option>
+          <option value="4">Pippi Langstrumpf</option>
+          <option value="5">Ursula Bauer</option>
+          <option value="6">Marie Antoinette</option>
+          <option value="7">Donald Duck</option>
+          <option value="8">Minnie Mouse</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <ul class="menu">
+        <li><a href="#">Courses</a></li>
+    </ul>
 </body>
 </html>
