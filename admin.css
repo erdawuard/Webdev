@@ -36,6 +36,7 @@ h1{
     box-sizing: border-box;
     text-align: center;
     display: flex;
+    display: block;
     
 
 }
@@ -48,7 +49,7 @@ h1{
     box-sizing: border-box;
     text-align: center;
     display: flex;
-    display: none;
+    display: block;
 
 }
 
@@ -60,7 +61,7 @@ h1{
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
-    display: none;
+    display: block;
 }
 
 .semester {
@@ -71,7 +72,7 @@ h1{
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
-    display: none;
+    display: block;
 
 }
 
@@ -81,7 +82,7 @@ h1{
     box-sizing: border-box;
     text-align: start;
     width: 200px;
-    display: none;
+    display: block;
 
 }
 
@@ -92,7 +93,7 @@ h1{
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
-    display: none;
+    display: block;
 
 }
 
@@ -102,6 +103,6 @@ h1{
     box-sizing: border-box;
     text-align: start;
     width: 600px;
-    display: none;
+    display: block;
 
 }
