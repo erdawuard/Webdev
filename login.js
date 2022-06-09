@@ -1,33 +1,57 @@
-$('#startpage, #adstudent').on(
-     'click',
-     function(){
-         $('#startpage, .adstudent').toggle()
-     }
- )
- loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    if (username === "Admin" && password === "Admin") {
-        alert("You have successfully logged in.");
-        window.location = "http://127.0.0.1:5500/admin.html";
-    } else {
-        loginErrorMsg.style.opacity = 1;
+function validate(){
+    var username = document.getElementById("uName").value;
+    var password = document.getElementById("pWord").value;
+    if ( username == "Admin" && password == "Admin"){
+        alert ("Login successfully");
+        window.location = "admin.html"; // Redirecting to other page.
+        return false;
     }
-    if (username === "Staff" && password === "Staff") {
-        alert("You have successfully logged in.");
-        window.location = "http://127.0.0.1:5500/staff.html"
-    } else{
-        loginErrorMsg.style.opacity = 1;
-    }    
+    else{
+        alert("Wrong username/password");
+    return false;
     }
-)
-function toggleAdStudent() {
-    var adStudent = document.getElementById('adstudent');
-    if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-  }
+    }
+
+function validatee(){
+    var username = document.getElementById("uName").value;
+    var password = document.getElementById("pWord").value;
+    if ( username == "Staff" && password == "Staff"){
+        alert ("Login successfully")
+        window.location = "staff.html";
+        return false;
+    }
+    else{
+        alert("Wrong username/password");
+    return false;
+    }
+    }
+
+function processDate(dob){
+    var parts = date.split("/");
+    return new Date(parts[2], parts[1] - 1, parts[0]);
+    }
+     
+function calcAge(dob) {
+    var dBirth = processDate(dob);
+    var dToday = new Date();
+    var diff = dToday.getTime() - dBirth.getTime();
+    return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+    }
+     
+function validateDate(dob){
+    var age = calcAge(dob);
+    console.log(age);
+    if(17<=age && age <=60) return true;
+    else {
+        alert("Invalid DOB");
+        return false;
+       }
+     }
+
+     $(document).ready(function(){
+        $("button").click(function(){
+          $("p").toggle();
+        });
+      });

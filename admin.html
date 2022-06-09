@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imaginary University Admin Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="login.js"></script>
     <link rel="stylesheet" type="text/css" href="admin.css">
 </head>
 <body>
@@ -15,83 +17,73 @@
       <li><a href="#">Students</a></li>
   </ul>
   </navbar>
-    <div class="startpage">
-      <div class="masta">
-        <button class="form-submit">Manage Staff</button>
+  <div class="startpage">
+      <div class="masta"; id="masta">
+        <button onclick="manageStaff">Manage Staff</button>
       </div>
-      <div class="mastu">
-        <button class="form-submit">Manage Students</button>
+
+      <div class="mastu"; id="mastu">
+        <button onclick="mastu">Manage Students</button>
       </div>
     </div>
+          <div class="adstudent">
+                  <button class="form-submit"> Add Student</button>
+                  <button class="form-submit"> Update Student</button>
+                  <button class="form-submit"> Delete Student</button>
+          </div>
 
-    <div class="adstudent">
-            <button class="form-submit"> Add Student</button>
-            <button class="form-submit"> Update Student</button>
-            <button class="form-submit"> Delete Student</button>
+          <div class="department">
+              <label for="department">Department Selection:</label>
+              <select name="department" id="department">
+                <option value="fachbereich1">Fachbereich 1</option>
+                <option value="fachbereich2">Fachbereich 2</option>
+                <option value="fachbereich3">Fachbereich 3</option>
+                <option value="fachbereich4">Fachbereich 4</option>
+              </select>
+          </div>
 
-            <button onclick="toggleAdStudent()" id="adstudent">Show adstudent</button>
-    </div>
+          <div class="semester">
+                  <label for="semester">Semester Selection:</label>
+                  <select name="semester" id="semester">
+                    <option value="semester1">Semester 1</option>
+                    <option value="semester2">Semester 2</option>
+                    <option value="semester3">Semester 3</option>
+                    <option value="semester4">Semester 4</option>
+                    <option value="semester5">Semester 5</option>
+                    <option value="semester6">Semester 6</option>
+                  </select>
+          </div>
 
-      <div class="department">
-        <label for="department">Department Selection:</label>
-        <select name="department" id="department">
-          <option value="fachbereich1">Fachbereich 1</option>
-          <option value="fachbereich2">Fachbereich 2</option>
-          <option value="fachbereich3">Fachbereich 3</option>
-          <option value="fachbereich4">Fachbereich 4</option>
-        </select>
-      </form>
-      <button onclick="toggleDepartment()" id="department">Show Department</button>
-         </div>
+          <div class="startform">
+              <label for="studId">Student ID:</label>
+              <input type="text" name="studId" id="studId" required>
+          
+              <label for="fina">First Name:</label>
+              <input type="text" name="fina" id="fina" required>
+          
+              <label for="lana">Last Name:</label>
+              <input type="text" name="lana" id="lana">
+          
+              <label for="dob">Date of Birth:</label>
+              <input type="date" name="dob" id="dob">
+          
+              <label for="gend">Gender:</label>
+              <input type="radio" name="gend" value="Male">Male
+              <input type="radio" name="gend" value="Female">Female
+              <input type="radio" name="gend" value="Other">Other
+          </div>
 
-    <div class="semester">
-            <label for="semester">Semester Selection:</label>
-            <select name="semester" id="semester">
-              <option value="semester1">Semester 1</option>
-              <option value="semester2">Semester 2</option>
-              <option value="semester3">Semester 3</option>
-              <option value="semester4">Semester 4</option>
-              <option value="semester5">Semester 5</option>
-              <option value="semester6">Semester 6</option>
-            </select>
-          </form>
-          <button onclick="toggleSemester()" id="semester">Show semester</button>
-    </div>
+          <div class="department2" required>
+                  <label for="department2">Department Selection:</label>
+                  <select name="department2" id="department2">
+                    <option value="fachbereich1">Fachbereich 1</option>
+                    <option value="fachbereich2">Fachbereich 2</option>
+                    <option value="fachbereich3">Fachbereich 3</option>
+                    <option value="fachbereich4">Fachbereich 4</option>
+                  </select>
+          </div>
 
-    <div class="startform">
-        <label for="studId">Student ID:</label>
-        <input type="text" name="studId" id="studId" required>
-     
-        <label for="fina">First Name:</label>
-        <input type="text" name="fina" id="fina" required>
-     
-        <label for="lana">Last Name:</label>
-        <input type="text" name="lana" id="lana">
-     
-        <label for="dob">Date of Birth:</label>
-        <input type="date" name="dob" id="dob">
-     
-        <label for="gend">Gender:</label>
-        <input type="radio" name="gend" value="Male">Male
-        <input type="radio" name="gend" value="Female">Female
-        <input type="radio" name="gend" value="Other">Other
-
-        <button onclick="toggleStartform()" id="startform">Show startform</button>
-    </div>
-
-    <div class="department2" required>
-            <label for="department2">Department Selection:</label>
-            <select name="department2" id="department2">
-              <option value="fachbereich1">Fachbereich 1</option>
-              <option value="fachbereich2">Fachbereich 2</option>
-              <option value="fachbereich3">Fachbereich 3</option>
-              <option value="fachbereich4">Fachbereich 4</option>
-            </select>
-          </form>
-          <button onclick="toggleDepartment2()" id="department2">Show department2</button>
-    </div>
-
-    <div class="startform2">      
+          <div class="startform2">      
             <label for="email">Email:</label>
             <input type="text" name="email" id="email" required>
          
@@ -100,13 +92,7 @@
          
             <button class="form-submit">add</button>
             <button class="form-submit">cancel</button>
-
-            <button onclick="toggleStartform2()" id="startform2">Show startform2</button>
-    </div>
-    
-  
-    
-     <script src="login.js"></script>
-
+          </div>  
+       </div>
 </body>
 </html>
