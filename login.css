@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    background: lightgray;
+    font-family: "Roboto", sans-serif;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adlog {
+    position:absolute; left: 450px; top: 100px;
+    background-color: lightgray;
+    width: 400px;;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    display: block;
+
+}
+
+.stafflog{
+    position:absolute; left: 750px; top: 100px;
+    background-color: lightgrey;
+    width: 400px;;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    display: block;
+}

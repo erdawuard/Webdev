@@ -28,6 +28,20 @@ function validatee(){
     }
     }
 
+let btn = document.querySelector("button");
+let startpage = document.querySelector("startpage");
+
+btn.addEventListener("click", () => {
+    if (startpage.style.display === "none") {
+        startpage.style.display = "block";
+    }else{
+        startpage.style.display = "none"
+    }
+})
+$(function(){
+    $("#datepicker").datepicker({maxDate: 0});
+});
+
 function processDate(dob){
     var parts = date.split("/");
     return new Date(parts[2], parts[1] - 1, parts[0]);
@@ -55,3 +69,33 @@ function validateDate(dob){
           $("p").toggle();
         });
       });
+
+$.getJSON("webdev.json", function(){
+    var startDate = new Date("1995-10-01");
+    var endDate = new Date("1995-02-01");
+
+    var filteredData = $.grep(data, function(a){
+        var aDate = new Date(a.date);
+        return aDate >= startDate && aDate <= endDate;
+    });
+
+    var startDate1 = new Date("1995-04-01");
+    var endDate1 = new Date("1995-09-01");
+
+    var filteredData = $.grep(data, function(b){
+        var bDate = new Date(b.date);
+        return aDate >= startDate1 && bDate <= endDate1;
+    });
+});
+
+$.getJSON("webdev.json", function(){
+
+    var content = {
+        "firstName":"",
+        "lastName":""
+    }
+
+    var output = document.getElementById("students");
+
+    output.innerHTML = content.firstName + " " + content.lastName;
+});
